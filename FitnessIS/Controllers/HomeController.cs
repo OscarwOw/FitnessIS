@@ -1,4 +1,5 @@
 ﻿using FitnessIS.Models;
+using FitnessISMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
