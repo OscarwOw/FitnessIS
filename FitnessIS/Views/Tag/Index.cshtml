@@ -1,6 +1,31 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<Tag>
 @{
 }
 <h1>chello wrodl</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tag name
+            </th>
+            <th>
+                Tag desc
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>
+                    @obj.Name
+                </td>
+                <td>
+                    @obj.Description
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

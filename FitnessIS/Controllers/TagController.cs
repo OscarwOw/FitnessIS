@@ -1,4 +1,5 @@
 ﻿using FitnessIS.Data;
+using FitnessIS.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessIS.Controllers
@@ -12,8 +13,8 @@ namespace FitnessIS.Controllers
         }
         public IActionResult Index()
         {
-            var tags = _dbContext.tags.ToList();
-            return View();
+            IEnumerable<Tag> tags = _dbContext.tags.ToList();
+            return View(tags);
         }
     }
 }
