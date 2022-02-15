@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessIS.Controllers
 {
+    [Route("[controller]/[action]")]
     public class AccountController : Controller
     {
         private readonly DatabaseContext _dbContext;
@@ -11,7 +12,7 @@ namespace FitnessIS.Controllers
             _dbContext = dbContext;
         }
   
-        public IActionResult Index()
+        public IActionResult login()
         {
             return View();
         }
